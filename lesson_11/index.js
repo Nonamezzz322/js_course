@@ -12,11 +12,12 @@ function RemoveKeys1(obj, arr){
 }
 
 function RemoveKeys2(obj, arr) {
-    let newObj = {};
-    for (let objElem of (Object.keys(obj))){
-        for (let arrElem of arr){
-            if (objElem !== arrElem){
-                newObj[objElem] = obj[objElem];
+
+  let newObj = obj;
+    for (let objElem of (Object.keys(obj))) {
+        for (let arrElem of arr) {
+            if (objElem === arrElem) {
+                delete newObj[objElem];
             }
         }
     }
