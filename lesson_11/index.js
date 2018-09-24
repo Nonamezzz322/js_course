@@ -29,3 +29,15 @@ function absDiff(a) {
         return Math.abs(a - b);
     }
 }
+
+// function RemoveKeys2(obj, arr) {
+//     let newObj = {};
+//     for (let objElem of (Object.keys(obj))){
+//         for (let arrElem of arr){
+//             if (objElem !== arrElem){
+//                 newObj[objElem] = obj[objElem];
+//             }
+//         }
+//     }
+//     return newObj;
+// }
