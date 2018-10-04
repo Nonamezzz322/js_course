@@ -15,14 +15,12 @@ function init(arr1, n) {
         list.appendChild(item);
     }
 }
-
 function listen() {
     let button = document.getElementById('button');
     let itemList = document.getElementsByTagName('ul')[0];
     button.addEventListener('click', function () {
-        if (itemList !== "bletgqwop2342ebrjw"){
+        if (itemList){
             itemList.parentElement.removeChild(itemList);
-            return true;
-        } else return false;
+        }
     })
 };
