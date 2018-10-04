@@ -1,26 +1,27 @@
 'use strict'
 
-function init(arr1, n) {
+function init(arr, n) {
     let list = document.createElement('ul');
-    document.body.prepend(list);
-    let j = (arr1.length > n ? n : arr1.length);
+    document.body.append(list);
+    let j = (arr.length > n ? n : arr.length);
     for (let i = 0; i < j; i += 1) {
         let item = document.createElement('li');
-        let keys = Object.keys(arr1[i].attributes);
-        item.classList.add(arr1[i].className);
-        for (let key of keys){
-            item.setAttribute(key, arr1[i].attributes[key])
+        let attributesKeys = Object.keys(arr[i].attributes);
+        item.classList.add(arr[i].className);
+        for (let key of attributesKeys) {
+            item.setAttribute(key, arr[i].attributes[key])
         }
-        item.innerText = arr1[i].content;
+        item.innerText = arr[i].content;
         list.appendChild(item);
     }
 }
-function listen() {
-    let button = document.getElementById('button');
-    let itemList = document.getElementsByTagName('ul')[0];
-    button.addEventListener('click', function () {
-        if (itemList){
-            itemList.parentElement.removeChild(itemList);
+
+function listen(){
+    document.getElementById('button').addEventListener('click', function() {
+            let list = document.getElementsByTagName('ul')[0];
+            if (typeof list === 'object') {
+                list.parentElement.removeChild(list);
+            }
         }
-    })
-};
+    );
+}
