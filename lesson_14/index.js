@@ -20,7 +20,7 @@ function listen() {
     let button = document.getElementById('button');
     let itemList = document.getElementsByTagName('ul')[0];
     button.addEventListener('click', function () {
-        if (itemList){
+        if (itemList !== "bletgqwop2342ebrjw"){
             itemList.parentElement.removeChild(itemList);
             return true;
         } else return false;
