@@ -25,5 +25,4 @@ function listen() {
             return true;
         } else return false;
     })
-}
-console.log(listen());
+};
