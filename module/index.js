@@ -81,4 +81,4 @@ function strangeSearch(array) {
         });
     	
     }
-strangeSearch(['kill', 'Bill', 'song']);
+// strangeSearch(['kill', 'Bill', 'song']);
