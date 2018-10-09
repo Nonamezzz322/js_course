@@ -42,35 +42,40 @@ function fact(number) {
 //Task 5
 function matrixDiff(arr1, arr2) {
 	let result = [];
-	for (let i = 0; i < arr1.length; i += 1) {
-            if (arr1[i].length !== arr2[i].length)
-                return NaN;
-            else {
-                for (let j = 0; j < arr1[i].length; j += 1) {
+    if (arr1.length === arr2.length)
+    	for (let i = 0; i < arr1.length; i += 1) {
+            if (arr1[i].length === arr2[i].length)
+               for (let j = 0; j < arr1[i].length; j += 1) {
                     result.push(Math.abs(arr1[i][j] - arr2[i][j]));
-                }
+                }  
+            else {
+                return NaN;
             }
         }
-    return result.reduce((a, b) => a + b);    
+    else {
+  		return NaN;
+    }
+    return result.reduce((a, b) => a + b);
 }
-
 
 
 //Task 6
 
-// const strangeSearch = (array) => {
-//     for (let element of array) {
-//         let field = document.createElement('div');
-//         document.body.appendChild(field);
-//         field.innerText = element;
-//         let input = document.createElement('input');
-//         input.id = element;
-//         field.prepend(input);
-//     }
-//     let searchBtn = document.createElement('button');
-//     searchBtn.value = 'Search';
-//     searchBtn.id = 'go';
-//     document.body.appendChild(searchBtn);
+function strangeSearch(array) {
+    for (let element of array) {
+        let item = document.createElement('div');
+        document.body.appendChild(item);
+        item.innerText = element;
+        let input = document.createElement('input');
+        input.type = 'number';
+        input.value = '0';
+        input.id = element;
+        item.prepend(input);
+    }
+    let go = document.createElement('button');
+    go.id = 'go'
+    go.innerText = 'Search'
+    document.body.appendChild(go);
 
-// };
-// strangeSearch(['asd', 'das', 'sda']);
+};
+// strangeSearch(['kill', 'Bill', 'song']);
