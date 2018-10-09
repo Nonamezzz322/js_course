@@ -75,7 +75,10 @@ function strangeSearch(array) {
     let go = document.createElement('button');
     go.id = 'go'
     go.innerText = 'Search'
-    document.body.appendChild(go);
-
-};
-// strangeSearch(['kill', 'Bill', 'song']);
+    document.body.appendChild(go);    
+    document.getElementById('go').addEventListener('click', function() {
+           window.location.href = `https://www.youtube.com/results?search_query=${array}`;
+        });
+    	
+    }
+strangeSearch(['kill', 'Bill', 'song']);
