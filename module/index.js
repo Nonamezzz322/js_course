@@ -88,4 +88,4 @@ function strangeSearch(array) {
            window.location.href = `https://www.youtube.com/results?search_query=${result}`;
         });   	
     };
-strangeSearch(['kill', 'Bill', 'song']);
+// strangeSearch(['kill', 'Bill', 'song']);
