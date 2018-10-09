@@ -75,10 +75,17 @@ function strangeSearch(array) {
     let go = document.createElement('button');
     go.id = 'go'
     go.innerText = 'Search'
-    document.body.appendChild(go);    
+    document.body.appendChild(go); 
+  //     function sort(...args) {
+		// let a = 0; 
+  //    	for (let i of args){
+  //    		a += +args[i] > a;
+  //    	}
+  //    	return a;
+  //   }
+  let result = array.join(' ');
     document.getElementById('go').addEventListener('click', function() {
-           window.location.href = `https://www.youtube.com/results?search_query=${array}`;
-        });
-    	
-    }
-// strangeSearch(['kill', 'Bill', 'song']);
+           window.location.href = `https://www.youtube.com/results?search_query=${result}`;
+        });   	
+    };
+strangeSearch(['kill', 'Bill', 'song']);
