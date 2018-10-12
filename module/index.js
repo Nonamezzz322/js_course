@@ -62,30 +62,31 @@ function matrixDiff(arr1, arr2) {
 //Task 6
 
 function strangeSearch(array) {
+  let arrInput = [];
+  let arrSort = [];
     for (let element of array) {
         let item = document.createElement('div');
         document.body.appendChild(item);
         item.innerText = element;
         let input = document.createElement('input');
         input.type = 'number';
-        input.value = '0';
+        input.value = 0;
         input.id = element;
         item.prepend(input);
+        arrInput.push(input);
     }
     let go = document.createElement('button');
-    go.id = 'go'
-    go.innerText = 'Search'
+    go.innerText = 'Search';
+    go.id = 'go';
     document.body.appendChild(go); 
-  //     function sort(...args) {
-		// let a = 0; 
-  //    	for (let i of args){
-  //    		a += +args[i] > a;
-  //    	}
-  //    	return a;
-  //   }
-  let result = array.join(' ');
-    document.getElementById('go').addEventListener('click', function() {
-           window.location.href = `https://www.youtube.com/results?search_query=${result}`;
-        });   	
-    };
-// strangeSearch(['kill', 'Bill', 'song']);
+    go.addEventListener('click', () => {
+      arrInput.sort((a, b) => b.value - a.value);
+      console.log(arrInput);
+      for (let element of arrInput) {
+        if (element.value > 0) {
+          arrSort.push(element.id);
+        }
+      }
+        window.location.href = `https://www.youtube.com/results?search_query=${arrSort.join('+')}`;
+    });
+}
