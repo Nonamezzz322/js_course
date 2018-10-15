@@ -80,8 +80,7 @@ function strangeSearch(array) {
     go.id = 'go';
     document.body.appendChild(go); 
     go.addEventListener('click', () => {
-      arrInput.sort((a, b) => b.value - a.value);
-      console.log(arrInput);
+      arrInput.sort((a, b) => a.value - b.value);
       for (let element of arrInput) {
         if (element.value > 0) {
           arrSort.push(element.id);
