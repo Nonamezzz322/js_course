@@ -12,10 +12,9 @@ Human.prototype.sayHello = function() {
 // let a = new Human();
 // a.sayHello();
 
-function AlevelStudent (name = 'Анатолий', age = 23, marks = [1, 2, 3, 4, 5]) {
-  this.name = String(name);
-  this.age = +age;
-  this.marks = marks;
+function AlevelStudent (name, age, marks = [1, 2, 3, 4, 5]) {
+	Human.call(this, name, age);
+	this.marks = marks;
 }
 
 AlevelStudent.prototype = Object.create(Human.prototype);
