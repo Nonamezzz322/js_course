@@ -24,7 +24,7 @@
 //   });
 // });
 
-new Promise(function(resolve,reject){
+new Promise(function(resolve, reject){
     setTimeout(function(){
         resolve({isAuth:true})
     },2000);
@@ -32,7 +32,7 @@ new Promise(function(resolve,reject){
 .then((authInfo)=>new Promise(function(resolve,reject){
     if (!authInfo.isAuth) {
         reject(null)
-    }else{
+    } else {
     setTimeout(function(){
         resolve({name:"Max"})
     },2000);

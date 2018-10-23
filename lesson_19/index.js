@@ -1,7 +1,7 @@
 
-function Human(name = 'Анатолий', age = 23) {
-	this.name = String(name);
-	this.age = +age;	
+function Human(obj) {
+	this.name = obj.name;
+	this.age = obj.age;	
 }
 
 
@@ -12,9 +12,9 @@ Human.prototype.sayHello = function() {
 // let a = new Human();
 // a.sayHello();
 
-function AlevelStudent (name, age, marks = [1, 2, 3, 4, 5]) {
-	Human.call(this, name, age);
-	this.marks = marks;
+function AlevelStudent (obj) {
+	Human.call(this, obj);
+	this.marks = obj.marks;
 }
 
 AlevelStudent.prototype = Object.create(Human.prototype);
