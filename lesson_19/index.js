@@ -1,5 +1,5 @@
 
-function Human(obj) {
+function Human(obj = {name: 'Anatoliy', age: 23}) {
 	this.name = obj.name;
 	this.age = obj.age;	
 }
@@ -12,7 +12,7 @@ Human.prototype.sayHello = function() {
 // let a = new Human();
 // a.sayHello();
 
-function AlevelStudent (obj) {
+function AlevelStudent (obj = {name: 'Anatoliy', age: 23, marks:[1, 2, 3, 4, 5]}) {
 	Human.call(this, obj);
 	this.marks = obj.marks;
 }
