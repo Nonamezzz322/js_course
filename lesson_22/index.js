@@ -132,6 +132,32 @@ function createItem(value){
     checkbox.addEventListener('click', onChange.bind(null, element, checkbox));
     
     todoList.append(element);
+
+
+    let lable = element.children[0].children[1];
+    lable.addEventListener('dblclick', ()=> {
+        console.log('click2')
+        element.classList.add('edit');
+        lable.style.display = 'none';
+        let change = document.createElement('input');
+        change.setAttribute('type', 'text');
+        element.children[0].appendChild(change);
+        change.value = value;
+        change.style.fontSize = '24px';
+        change.style.width = '90%';
+        change.style.marginLeft = '9%';
+        change.style.padding = '7px 0px';
+        change.style.borderColor = 'rgba(170, 170, 170, 0.01)'
+        change.style.height = '100%';
+        todoList.addEventListener('keydown', (e)=> {
+            if(e.keyCode === 13) {
+            element.children[0].children[1].innerText = change.value;
+            change.style.display = 'none';
+            lable.style.display = 'block';
+            element.classList.remove('edit');
+         }
+        });
+    });
 }
 
 function onSubmite(e) {
@@ -170,15 +196,17 @@ function checkedAll(){
     }
 }
 
-function getInput(){//доделать функцию
-    console.log('click')
-    // todoList.children[0].classList.add('editing');
-    // todoList.children[0].classList.add('edit');
-}
+// function getInput(){//доделать функцию
+//     console.log('click')
+//     todoList.children[0].classList.add('editing');
+//     todoList.children[0].children[0].classList.add('edit');
+//     let change =  document.createElement('input')
+//     change.innerHTML.value = 'fsdfsdf';
+//     todoList.children[0].appendChild(change);
+// }
 
 
 input.addEventListener('keydown', onSubmite);
 clearButton.addEventListener('click', onClear);
 filters.addEventListener('click', onRoutingChange);
 toggleAll.addEventListener('change', checkedAll);
-view.addEventListener('click', getInput);
