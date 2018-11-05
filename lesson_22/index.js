@@ -80,7 +80,6 @@ function hideClearButton(){
     for(let i=0; i<todoList.children.length; i+=1){
         if(todoList.children[i].classList.contains('completed')){
             clearButton.style.display = 'none';
-            break;
         } else {
             clearButton.style.display = 'block';
         }
@@ -158,20 +157,23 @@ function checkedAll(){
             todoList.children[i].classList.add('completed')
             todoList.children[i].children[0].children[0].checked = true;
             todoCount.innerText = `0 items left`;
+            clearButton.style.display = 'block';
+            
         }
     } else {
         for(let i=0; i<todoList.children.length; i+=1){
             todoList.children[i].classList.remove('completed')
             todoList.children[i].children[0].children[0].checked = false;
             todoCount.innerText =`${todoList.children.length} item${todoList.children.length === 1 ? '' : 's'} left`;
+            clearButton.style.display = 'none';
         }
     }
 }
 
 function getInput(){//доделать функцию
     console.log('click')
-    todoList.children[0].classList.add('editing');
-    todoList.children[0].classList.add('edit');
+    // todoList.children[0].classList.add('editing');
+    // todoList.children[0].classList.add('edit');
 }
 
 
