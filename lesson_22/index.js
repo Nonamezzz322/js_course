@@ -69,7 +69,6 @@ function onChange(element, checkbox){
     hideClearButton();
     if(checkbox.checked){
         element.classList.add('completed');
-        
         updateCount(-1);
     } else{
         element.classList.remove('completed');
@@ -184,13 +183,13 @@ function checkedAll(){
             todoList.children[i].children[0].children[0].checked = true;
             todoCount.innerText = `0 items left`;
             clearButton.style.display = 'block';
-            
+            updateCount(-1);
         }
     } else {
         for(let i=0; i<todoList.children.length; i+=1){
+            updateCount(+1);
             todoList.children[i].classList.remove('completed')
             todoList.children[i].children[0].children[0].checked = false;
-            todoCount.innerText =`${todoList.children.length} item${todoList.children.length === 1 ? '' : 's'} left`;
             clearButton.style.display = 'none';
         }
     }
