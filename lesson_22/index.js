@@ -11,7 +11,7 @@ const view = document.getElementsByClassName('view')[0];
 const SECRET_KEY = '$2a$10$7ErhQXvwcbeRkHDctEkaoeyRoceBR01yslBCrQcCcvv1JB54sKlJO';
 
 
-let count = 0;
+// let count = 0;
 
 function postData (data){
     return fetch('https://api.sjonbin.io/b', {
@@ -53,26 +53,35 @@ window.postData = postData;
 window.getData = getData;
 window.putData = putData;
 
-function updateCount(change) {
-    count += change;
-    todoCount.innerText = `${count} item${count === 1 ? '' : 's'} left`;
+function updateCount(count) {
+    let element = document.getElementsByClassName("view")
+	let checkbox = document.getElementsByClassName("toggle")
+	for(let i = 0; i < element.length; i++) {
+		if (!checkbox[i].checked) {
+			count++
+		}
+	}
+	  todoCount.innerText = `${count} ${count===1?" item":" items"} left`
 }
+    // count += change;
+//     // todoCount.innerText = `${count} item${count === 1 ? '' : 's'} left`;
+// }
 
 function onDestroy (element) {
     todoList.removeChild(element);
     if(!element.classList.contains('completed')){
-        updateCount(-1);
+        updateCount(0);
     }
 }
 
 function onChange(element, checkbox){
-    hideClearButton();
+    hideClearButton(0);
     if(checkbox.checked){
         element.classList.add('completed');
         updateCount(-1);
     } else{
         element.classList.remove('completed');
-        updateCount(+1);
+        updateCount(-1);
     }
 }
 function hideClearButton(){
@@ -165,7 +174,7 @@ function onSubmite(e) {
         main.style.display = 'block';
         input.value = '';
         createItem(value);  
-        updateCount(+1);
+        updateCount(-1);
     }
 }
 
@@ -179,15 +188,15 @@ function onClear(){
 function checkedAll(){
     if(toggleAll.checked) {
         for(let i=0; i<todoList.children.length; i+=1){
+            updateCount(0);
             todoList.children[i].classList.add('completed')
             todoList.children[i].children[0].children[0].checked = true;
             todoCount.innerText = `0 items left`;
             clearButton.style.display = 'block';
-            updateCount(-1);
         }
     } else {
         for(let i=0; i<todoList.children.length; i+=1){
-            updateCount(+1);
+            updateCount(0);
             todoList.children[i].classList.remove('completed')
             todoList.children[i].children[0].children[0].checked = false;
             clearButton.style.display = 'none';
