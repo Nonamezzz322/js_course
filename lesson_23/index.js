@@ -72,12 +72,13 @@ function createimage(){
 	})
     .then(() => hidePreloader())
     .then(() => enableAll())
-    .catch(() => {
+    .catch((err) => {
         hidePreloader()
         enableAll()   
-        alert('Ошибка, такого слова нет, пжалуйста, введите слово заново!');
         word.value = null;
         wordValid();
+        console.log(err);
+        alert(err);
     })
 }
 
