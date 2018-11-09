@@ -29,6 +29,7 @@ function wordValid(){
     }
     requestDisable()
 }
+
 function disableAll() {
     width.disabled = true;
     height.disabled = true;
