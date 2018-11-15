@@ -20,12 +20,23 @@ class App extends Component {
     );
   }
 
-  getMyWeather = async(event) => {
+  getMyWeather(event){
     event.preventDefault();
     const city = event.target.elements.city.value;
-    this.d = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=3c912d7dc513a632a861c7ad683a49f7`)
-    let data = await this.d.json();
-    console.log(data)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=3c912d7dc513a632a861c7ad683a49f7`)
+    .then((res) =>res.json())
+    .then((res) =>console.log(res))
+  }
+  
+  setWeather(data){
+    this.body = document.getElementsByTagName('body')[0];
+    let cityName = 'data.name';
+    this.city = document.createElement('span');
+    this.city.id = 'city_name';
+    this.body.append(this.city);
+    this.cityDisplay = document.getElementById('city_name');
+		this.cityDisplay.innerText = `${cityName}`;
+
   }
 }
 
