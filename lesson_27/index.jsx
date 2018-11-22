@@ -6,17 +6,17 @@ function Footer(props) {
     <footer className="footer">
       <span className="todo-count">1</span>
       <ul className="filters">
-        <li onClick = {() => props.setFilter('all')}>
-          <a href="#/"className={props.filter === '' ? 'selected' : null}>All</a>
+      <li onClick={() => props.setFilter('')}>
+          <a href="#/" className={props.filter === '' ? 'selected' : null}>All</a>
         </li>
-        <li onClick = {() => props.setFilter('active')}>
-        <a href="#/active" className={props.filter === '' ? 'selected' : null}>Active</a>
+          <li onClick={() => props.setFilter('active')}>
+        <a href="#/active" className={props.filter === 'active' ? 'selected' : null}>Active</a>
         </li>
-        <li onClick = {() => props.setFilter('completed')}>
-        <a href="#/completed" className={props.filter === '' ? 'selected' : null}>Completed</a>
+          <li onClick={() => props.setFilter('completed')}>
+        <a href="#/completed" className={props.filter === 'completed' ? 'selected' : null}>Completed</a>
         </li>
       </ul>
-      <button className="clear-completed">Clear completed</button>
+      <button className="clear-completed" onClick={() => props.onClearCompleted('dd')}>Clear completed</button>
     </footer>
   );
 }
@@ -86,6 +86,7 @@ class ToDo extends React.Component {
     this.setFilter = this.setFilter.bind(this);
     this.onEditTask = this.onEditTask.bind(this);
     this.toggleAll = this.toggleAll.bind(this);
+    this.onClearCompleted = this.onClearCompleted.bind(this);
   }
 
   onCreate(value) {
@@ -121,16 +122,22 @@ class ToDo extends React.Component {
       }),
     });
   }
+
+  onClearCompleted(id){
+    console.log(id)
+    
+  }
   
   onDestroy(id) {
-    console.log('destroyed', id);
     this.setState({
       list: this.state.list.filter(element => element.id !== id)
   });
   }
 
-  setFilter(){
-  console.log('xxx')
+  setFilter(props){
+      this.setState({
+        filter: props,
+    });
   }
   
   render() {
@@ -139,12 +146,22 @@ class ToDo extends React.Component {
         <Header onCreate={this.onCreate} toggleAll = {this.toggleAll}/>
         <ul className="todo-list" style={{ display: 'block' }}>
           {
-            this.state.list.map(data => (
-              <Item key={data.id} {...data} onEdit={this.onEdit} onDestroy = {this.onDestroy} onEditTask = {this.onEditTask}/>
+            this.state.list
+            .filter((item) =>{
+              if(this.state.filter === 'active'){
+                return item.checked === false;
+              }
+              if(this.state.filter === 'completed'){
+                return item.checked;
+              }
+              return true;
+            })
+            .map(data => (
+              <Item key={data.id} {...data} onEdit={this.onEdit} onDestroy={this.onDestroy}/>
             ))
           }
         </ul>
-        <Footer setFilter = {this.setFilter} filter = {this.state.filter}/>
+        <Footer setFilter = {this.setFilter} filter = {this.state.filter} onClearCompleted ={this.onClearCompleted} />
       </section>
     );
   }

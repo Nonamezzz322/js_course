@@ -24065,7 +24065,7 @@ function Footer(props) {
     className: "filters"
   }, _react.default.createElement("li", {
     onClick: function onClick() {
-      return props.setFilter('all');
+      return props.setFilter('');
     }
   }, _react.default.createElement("a", {
     href: "#/",
@@ -24076,16 +24076,19 @@ function Footer(props) {
     }
   }, _react.default.createElement("a", {
     href: "#/active",
-    className: props.filter === '' ? 'selected' : null
+    className: props.filter === 'active' ? 'selected' : null
   }, "Active")), _react.default.createElement("li", {
     onClick: function onClick() {
       return props.setFilter('completed');
     }
   }, _react.default.createElement("a", {
     href: "#/completed",
-    className: props.filter === '' ? 'selected' : null
+    className: props.filter === 'completed' ? 'selected' : null
   }, "Completed"))), _react.default.createElement("button", {
-    className: "clear-completed"
+    className: "clear-completed",
+    onClick: function onClick() {
+      return props.onClearCompleted('dd');
+    }
   }, "Clear completed"));
 }
 
@@ -24183,6 +24186,7 @@ function (_React$Component2) {
     _this2.setFilter = _this2.setFilter.bind(_assertThisInitialized(_assertThisInitialized(_this2)));
     _this2.onEditTask = _this2.onEditTask.bind(_assertThisInitialized(_assertThisInitialized(_this2)));
     _this2.toggleAll = _this2.toggleAll.bind(_assertThisInitialized(_assertThisInitialized(_this2)));
+    _this2.onClearCompleted = _this2.onClearCompleted.bind(_assertThisInitialized(_assertThisInitialized(_this2)));
     return _this2;
   }
 
@@ -24221,9 +24225,13 @@ function (_React$Component2) {
       });
     }
   }, {
+    key: "onClearCompleted",
+    value: function onClearCompleted(id) {
+      console.log(id);
+    }
+  }, {
     key: "onDestroy",
     value: function onDestroy(id) {
-      console.log('destroyed', id);
       this.setState({
         list: this.state.list.filter(function (element) {
           return element.id !== id;
@@ -24232,8 +24240,10 @@ function (_React$Component2) {
     }
   }, {
     key: "setFilter",
-    value: function setFilter() {
-      console.log('xxx');
+    value: function setFilter(props) {
+      this.setState({
+        filter: props
+      });
     }
   }, {
     key: "render",
@@ -24250,17 +24260,27 @@ function (_React$Component2) {
         style: {
           display: 'block'
         }
-      }, this.state.list.map(function (data) {
+      }, this.state.list.filter(function (item) {
+        if (_this3.state.filter === 'active') {
+          return item.checked === false;
+        }
+
+        if (_this3.state.filter === 'completed') {
+          return item.checked;
+        }
+
+        return true;
+      }).map(function (data) {
         return _react.default.createElement(Item, _extends({
           key: data.id
         }, data, {
           onEdit: _this3.onEdit,
-          onDestroy: _this3.onDestroy,
-          onEditTask: _this3.onEditTask
+          onDestroy: _this3.onDestroy
         }));
       })), _react.default.createElement(Footer, {
         setFilter: this.setFilter,
-        filter: this.state.filter
+        filter: this.state.filter,
+        onClearCompleted: this.onClearCompleted
       }));
     }
   }]);
@@ -24296,7 +24316,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57443" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50832" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
