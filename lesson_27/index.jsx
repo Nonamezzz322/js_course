@@ -157,7 +157,7 @@ class ToDo extends React.Component {
               return true;
             })
             .map(data => (
-              <Item key={data.id} {...data} onEdit={this.onEdit} onDestroy={this.onDestroy}/>
+              <Item key={data.id} {...data} onEdit={this.onEdit} onDestroy={this.onDestroy} />
             ))
           }
         </ul>
