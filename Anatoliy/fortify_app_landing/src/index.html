@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fortify App</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="./styles.css">
+    <link rel="stylesheet" type="text/css" href="./reset.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+</head>
+
+<body>
+<div class="l_header">
+	<div class="m_width_menu">
+        <div class="b_header">
+            <a href="#" class="b_logo">
+                <span class="logo_name">
+                    Fortify
+                </span>
+            </a>
+            <div class="b_menu">
+                <a href="#" class="c_menu_item">How it works</a>
+                <a href="#" class="c_menu_item">GitHub</a>
+                <a href="#" class="c_menu_item">Download</a>
+                <a href="#" class="c_menu_item">My Certificates</a>
+                <a href="#" class="c_menu_item">FAQ</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="l_section m_main_section">
+    <div class="m_width">
+        <div class="b_main">
+            <h1 class="c_title">Fortify enables cross-browser usage of local
+			certificates and smart cards</h1>
+            <div class="description">Avaliable for macOS, Windows 7 and later <br>
+			Browsers IE 11, Edge, Safari, and Chrome</div>
+            <button class="c_btn_download">Download App</button> 
+        </div>
+    </div>
+</div>
+
+<div class="l_section m_second_section">
+	 <div class="b_slider_container">
+    	<div class="c_slider_images">
+    		<img class="my_slide" src="../assets/img/fortify_app_2.jpg">
+    	</div>
+    	<div class="c_slider_buttons">
+    		 <button autofocus class="slider_button"></button> 
+  			<button class="slider_button"></button> 
+  			<button class="slider_button"></button>
+    	</div>
+    </div>
+    <div class="m_width">
+        <div class="b_what_fortify_do">
+            <h2 class="c_title">What does <span class="name">Fortify</span> do?</h2>
+            <div class="b_what_do_item">
+            	<div class="c_what_do_item_img">
+            		<img src="../assets/img/info_1.jpg" style="width: 100%">
+            	</div>
+                <div class="с_description">
+                   Use your smart card or security token that has already been enrolled with a certificate with web applications.
+                </div>
+            </div>
+            <div class="b_what_do_item">
+            	<div class="c_what_do_item_img">
+            		<img src="../assets/img/info_2.jpg" style="width: 100%">
+            	</div>
+                <div class="с_description">Enroll for a new certificate or renew an existing one.</div>
+            </div>
+            <div class="b_what_do_item">
+            	<div class="c_what_do_item_img">
+            		<img src="../assets/img/info_3.jpg" style="width: 100%">
+            	</div>
+                <div class="с_description">Build applications that can sign/verify or encrypt/decrypt using locally installed certificates, smart cards or security tokens.</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="l_section m_third_section">
+    <div class="m_width">
+        <div class="b_download_app">
+            <h2 class="c_title">Download App</h2>
+            <a class="c_button" href="#">
+            	<div class="icon"></div>
+                <div class="c_info">
+                    <div class="name_os">Download for Mac</div>
+                    <div class="version_os">macOS 10.9 and later</div>
+                </div>
+            </a>
+            <a class="c_button" href="">
+            	<div class="icon"></div>
+                <div class="c_info">
+                    <div class="name_os">Download for Windows</div>
+                    <div class="version_os">Windows 7 and later</div>
+                </div>
+            </a>
+        </div>
+        <div class="b_questions">
+            <h2 class="c_title">Frequently asked questions</h2>
+            <table class="c_table">
+                <tbody>
+                	<tr class="row" >
+                		<td class="cell question">How does Fortify work?</td>
+                		<td class="cell">Fortify is a locally installed application that listens on a known TCP port. Web applications use the Fortify WebCrypto polyfill to communicate with this application which enables the web application to use smart cards, security tokens and locally installed certificates.
+						</td>
+                	</tr>
+                	<tr class="row" >
+                		<td class="cell question">What smart cards do you support?</td>
+                		<td class="cell">Generally Fortify should work with any PKCS#11 enabled smart card. For it to work though it needs to know which driver to load for a given smart card. 
+							<details>
+								<summary class="c_toggle_table">
+									Click to show smart cards that are currently supported
+								</summary>
+								<div class="table_supported_container">
+								<table class="supported_cards">
+									<thead>
+										<th class="supported_cards_cell m_head">Card</th>
+										<th class="supported_cards_cell m_head">Mac OS</th>
+										<th class="supported_cards_cell m_head">Windows</th>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="supported_cards_cell">Gemalto IDPrime v2+ .NET</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/check_mark.svg" style="width: 30px">
+											</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/check_mark.svg" style="width: 30px">
+											</td>
+										</tr>
+										<tr>
+											<td class="supported_cards_cell">NXP JCOP J3D</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/check_mark.svg" style="width: 30px">
+											</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/cross.svg" style="width: 30px">
+											</td>
+										</tr>
+										<tr>
+											<td class="supported_cards_cell">Aladdin eToken PRO USB 72K Java</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/check_mark.svg" style="width: 30px">
+											</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/check_mark.svg" style="width: 30px">
+											</td>
+										</tr>
+										<tr>
+											<td class="supported_cards_cell">SafeNet e Token 5100</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/check_mark.svg" style="width: 30px">
+											</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/check_mark.svg" style="width: 30px">
+											</td>
+										</tr>
+										<tr>
+											<td class="supported_cards_cell">Datakey 32K PKI Smart Card Model 330</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/check_mark.svg" style="width: 30px">
+											</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/check_mark.svg" style="width: 30px">
+											</td>
+										</tr>
+										<tr>
+											<td class="supported_cards_cell">Yubico Yubikey NEO OTP+U2F+CCID</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/check_mark.svg" style="width: 30px">
+											</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/check_mark.svg" style="width: 30px">
+											</td>
+										</tr>
+										<tr>
+											<td class="supported_cards_cell">Yubico Yubikey 4 OTP+U2F+CCID</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/check_mark.svg" style="width: 30px">
+											</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/check_mark.svg" style="width: 30px">
+											</td>
+										</tr>
+										<tr>
+											<td class="supported_cards_cell">Broken EstEID 1.1 warm</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/check_mark.svg" style="width: 30px">
+											</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/cross.svg" style="width: 30px">
+											</td>
+										</tr>
+										<tr>
+											<td class="supported_cards_cell">EstEID 1.0 cold</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/check_mark.svg" style="width: 30px">
+											</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/cross.svg" style="width: 30px">
+											</td>
+										</tr>
+										<tr>
+											<td class="supported_cards_cell">EstEID 1.0 cold</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/check_mark.svg" style="width: 30px">
+											</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/cross.svg" style="width: 30px">
+											</td>
+										</tr>
+										<tr>
+											<td class="supported_cards_cell">EstEID 1.0 cold 2006</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/check_mark.svg" style="width: 30px">
+											</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/cross.svg" style="width: 30px">
+											</td>
+										</tr>
+										<tr>
+											<td class="supported_cards_cell">AET Smartcard</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/check_mark.svg" style="width: 30px">
+											</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/cross.svg" style="width: 30px">
+											</td>
+										</tr>
+										<tr>
+											<td class="supported_cards_cell">EstEID 1.0 warm 2006</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/check_mark.svg" style="width: 30px">
+											</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/cross.svg" style="width: 30px">
+											</td>
+										</tr>
+										<tr>
+											<td class="supported_cards_cell">AET Smartcard</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/check_mark.svg" style="width: 30px">
+											</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/cross.svg" style="width: 30px">
+											</td>
+										</tr>
+										<tr>
+											<td class="supported_cards_cell">EstEID 1.1 cold</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/check_mark.svg" style="width: 30px">
+											</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/cross.svg" style="width: 30px">
+											</td>
+										</tr>
+										<tr>
+											<td class="supported_cards_cell">EstEID 3.0 (dev1) cold</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/check_mark.svg" style="width: 30px">
+											</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/cross.svg" style="width: 30px">
+											</td>
+										</tr>
+										<tr>
+											<td class="supported_cards_cell">EstEID 3.0 (dev1) warm</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/check_mark.svg" style="width: 30px">
+											</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/cross.svg" style="width: 30px">
+											</td>
+										</tr>
+										<tr>
+											<td class="supported_cards_cell">EstEID 3.0 (dev2) warm</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/check_mark.svg" style="width: 30px">
+											</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/cross.svg" style="width: 30px">
+											</td>
+										</tr>
+										<tr>
+											<td class="supported_cards_cell">EstEID 3.0 (18.01.2011) warm</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/check_mark.svg" style="width: 30px">
+											</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/cross.svg" style="width: 30px">
+											</td>
+										</tr>
+										<tr>
+											<td class="supported_cards_cell">EstEID 3.5 cold</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/check_mark.svg" style="width: 30px">
+											</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/cross.svg" style="width: 30px">
+											</td>
+										</tr>
+										<tr>
+											<td class="supported_cards_cell">AzeDIT 3.5 cold</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/check_mark.svg" style="width: 30px">
+											</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/cross.svg" style="width: 30px">
+											</td>
+										</tr>
+										<tr>
+											<td class="supported_cards_cell">Rutoken ECP (DS)</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/cross.svg" style="width: 30px">
+											</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/check_mark.svg" style="width: 30px">
+											</td>
+										</tr>
+										<tr>
+											<td class="supported_cards_cell">PivKey T800</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/check_mark.svg" style="width: 30px">
+											</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/check_mark.svg" style="width: 30px">
+											</td>
+										</tr>
+										<tr>
+											<td class="supported_cards_cell">PivKey T600</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/check_mark.svg" style="width: 30px">
+											</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/check_mark.svg" style="width: 30px">
+											</td>
+										</tr>
+										<tr>
+											<td class="supported_cards_cell">USG:Executive Office of the President</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/check_mark.svg" style="width: 30px">
+											</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/cross.svg" style="width: 30px">
+											</td>
+										</tr>
+										<tr>
+											<td class="supported_cards_cell">USG:Department of Veterans Affairs</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/check_mark.svg" style="width: 30px">
+											</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/cross.svg" style="width: 30px">
+											</td>
+										</tr>
+										<tr>
+											<td class="supported_cards_cell">USG:State Department</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/check_mark.svg" style="width: 30px">
+											</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/cross.svg" style="width: 30px">
+											</td>
+										</tr>
+										<tr>
+											<td class="supported_cards_cell">Gemalto IDPrime MD 840 (PKI)</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/check_mark.svg" style="width: 30px">
+											</td>
+											<td class="supported_cards_cell m_active">
+												<img src="../assets/img/check_mark.svg" style="width: 30px">
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							</details>
+						</td>
+                	</tr>
+                	<tr class="row">
+                		<td class="cell question">What Browsers does Fortify support?</td>
+                		<td class="cell">IE 11, Edge, Safari, Firefox, and Chrome</td>
+                	</tr>
+                	<tr class="row" >
+                		<td class="cell question">What Operating Systems does Fortify support?</td>
+                		<td class="cell">OSX, Windows 7 and later</td>
+                	</tr>
+              	</tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="l_footer">
+    <div class="m_width">
+        <div class="b_footer">
+            <div class="c_info">
+                <div class="copyright">© 2016. Peculiar Ventures, Inc. All rights reserved.</div>
+                <p class="terms_services">Terms and Services</p>
+                <nav class="nav">
+                    <a href="#" class="c_bottom_menu_item">How it works</a>
+                    <a href="#" class="c_bottom_menu_item">GitHub</a>
+                    <a href="#" class="c_bottom_menu_item">Download</a>
+                    <a href="#" class="c_bottom_menu_item">FAQ</a>
+                </nav>
+                <div class="lock_icon"></div>
+               	<div class="open_icon"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

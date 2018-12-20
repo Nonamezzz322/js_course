@@ -1,0 +1,746 @@
+html {
+	appearance: none;
+}
+
+body {
+  align-items: center;
+  text-align: left; 
+}
+
+html, body {
+  width: 100%;
+}
+
+table {
+  border-spacing: 0; 
+}
+
+.m_width_menu {
+ 	max-width: 1265px;
+}
+.m_width {
+	max-width: 1000px;
+}
+.m_width, .m_width_menu  {
+	position: relative; 
+	width: calc(100% - 132px);
+	margin: 0 auto;
+}
+.l_header {
+	font-family: Open Sans;
+  	width: 100%;
+  	height: 80px;
+	position: absolute;
+	top: 30px;
+	left: 0;
+	z-index: 1;
+}
+
+.l_section {
+	font-family: Open Sans;
+  	width: 100%;
+  	position: relative; 
+}
+.l_section.m_main_section {
+  	padding: 40px 0 calc(73px + 37.5vw);
+    background: linear-gradient(180deg, #3D4346 0%, #282E32 100%); 
+}
+.b_header {
+	width: 100%
+}
+
+.b_logo {
+	display: flex;
+	justify-content: flex-start;
+	width: 8.3%;
+	height: 35px; 
+	background: url(../assets/img/logo.svg) 0% 50% no-repeat /contain;
+}
+
+.logo_name {
+	margin-left: 44px;
+	padding-top: 8px;
+	color: #fff;
+	font-size: 1.05em;
+	font-weight: 600;
+	letter-spacing: 0.3px;
+}
+.b_menu {
+	display: flex;
+	justify-content: flex-end;
+	height: 35px;
+	margin-top: -25px;
+}
+
+.c_menu_item {
+	font-size: 14px;
+  	color: #fff;
+  	opacity: 0.7;
+  	font-weight: 400;
+  	letter-spacing: 0.34px;
+  	margin-right: 40px;
+}
+.c_menu_item:hover {
+	opacity: 1;
+}
+
+.app_menu_item:last-child {
+    margin-right: 0;
+}
+
+
+.b_main {
+	margin-top: 130px;
+}
+.c_title {
+ 	max-width: 702px;
+	color: #fff;
+	font-size: 34px;
+	line-height: 44px;
+	letter-spacing: 0.3px;
+ }
+.description {
+	margin-top: 18px;
+	font-size: 12px;
+	color: #fff; 
+	opacity: 0.52;
+	line-height: 18px;
+	letter-spacing: 0.42px;
+}
+
+.c_btn_download {
+    margin-top: 40px;
+    width: 125px;
+    text-align: center;
+    font-size: 13px;
+    letter-spacing: 0.45px;
+    line-height: 18px;
+    color: #fff;
+    padding: 8px 15px 10px;
+   	background-image: linear-gradient(180deg, #4da3fc 0%, #027eff 100%);
+    border-radius: 2px;
+}
+
+.b_slider_container {
+	width: calc(100% - 134px);
+	position: absolute;
+	top: 0;
+	left: 50%;
+	max-width: 1040px;
+	transform: translate(-50%, -60%)
+ }
+ .c_slider_images > img {
+ 	width: 100%;
+ 	border-radius: 3px;
+ 	box-shadow: 0px 0px 24px 3px rgba(0,0,0,0.24);
+ }
+
+ .c_slider_buttons {
+ 	margin-top: 31px;
+    text-align: center;
+ }
+
+ .slider_button {
+ 	display: inline-block;
+ 	height: 10px;
+ 	width: 10px;
+ 	padding: 0;
+ 	background-color: rgba(216, 216, 216, 0.3);
+ 	border-radius: 50%;
+ 	cursor: pointer;
+ }
+ .slider_button:not(:last-child) {
+ 	margin-right: 20px;
+ }
+ 
+.slider_button:focus {
+	background-color: #0097fc;
+}
+
+    
+.l_section.m_second_section {
+    padding: calc(74px + 25vw) 0 110px;
+    background: rgba(40, 46, 50, 0.02); 
+}
+
+.b_what_fortify_do .c_title {
+	font-size: 28px;
+	font-weight: 600;
+	color: #282E32;
+	line-height: 43px; 
+	letter-spacing: 0.09px;
+}
+.b_what_do_item {
+	display: inline-block;
+	width: calc(33.3% - 21px);
+ 	margin: 49px 20px 0 0; 
+ 	vertical-align: top;
+}
+
+.b_what_do_item:last-child {
+    margin-right: 0; 
+}
+
+.c_what_do_item_img > img {
+	display: block;
+  	border: 1px solid #EAEEF1;
+ 	border-radius: 5px;
+}
+.с_description {
+	margin-top: 42px;
+	width: calc(100% - 20px);
+	color: #3B4044;
+ 	font-size: 15px;
+ 	line-height: 25px;
+  	letter-spacing: 0.2px;
+}
+
+
+.b_what_fortify_do .name {
+  color: #0097FC; 
+}
+
+.l_section.m_third_section {
+    padding: 106px 0 168px;
+    background: #fff;
+    border-top: 1px solid rgba(151, 151, 151, 0.1); 
+}
+
+.b_download_app > .c_title {
+	color: #282e32;
+	font-size: 28px;
+	font-weight: 600;
+	line-height: 43px;
+	letter-spacing: 0.09px;
+}
+.b_download_app > .c_button {
+	display: inline-block;
+	vertical-align: top;
+	cursor: pointer;
+	height: 100px;
+	width: calc(50% - 25px);
+	margin-top: 61px;
+	margin-right: 21px;
+	padding: 23px 30px 27px;
+	border: 1px solid rgba(151, 151, 151, 0.2);
+	border-radius: 5px;
+}
+ 
+.b_download_app .c_button:hover {
+    background: rgba(0, 151, 252, 0.03); 
+}
+.b_download_app .icon {
+	width: 50px;
+	height: 50px;
+	display: inline-block;
+	vertical-align: middle; 
+}
+
+.c_button:nth-child(2) > .icon {
+	background: url(../assets/img/download_mac.svg) 0% 0% no-repeat /cover;
+}
+.c_button:nth-child(3) > .icon {
+	background: url(../assets/img/download_windows.svg) 0% 0% no-repeat /cover;
+}
+
+
+.b_download_app .c_info {
+  	display: inline-block;
+  	margin-left: 70px;
+  	margin-top: -70px;
+}
+
+.b_download_app .name_os {
+	color: #282E32;
+	font-size: 18px;
+  	letter-spacing: 0.25px;
+  	line-height: 25px; 
+}
+
+.b_download_app .version_os {
+	color: #282e32;
+	opacity: 0.52;
+  	font-size: 13px;
+  	letter-spacing: 0.45px; 
+}
+  	
+  	
+.b_questions {
+	margin-top: 144px;
+}
+
+.b_questions .c_title {
+	color: #282e32;
+	font-size: 28px;
+	font-weight: 600;
+	line-height: 43px;
+	letter-spacing: 0.09px;
+}
+
+.c_table {
+	margin-top: 92px;
+}
+.cell {
+    letter-spacing: 0.2px;
+    line-height: 25px;
+    vertical-align: top;   
+    font-size: 15px;
+    color: #3B4044;
+    padding: 45px 0;
+}
+
+.row:not(:last-child) {
+	 border-bottom: 1px solid rgba(151, 151, 151, 0.1);
+}
+.question {
+	font-size: 18px;
+    color: #282E32;
+    letter-spacing: 0.25px;
+    width: 40%; 
+}
+
+.c_toggle_table {
+	font-size: 15px;
+	line-height: 25px;
+	letter-spacing: 0.2px;
+}
+.supported_cards_cell {
+    border: 1px solid rgba(151, 151, 151, 0.2);
+    border-radius: 5px;
+    padding: 10px 15px;
+    line-height: 29px;
+    color: #3B4044;
+    letter-spacing: 0.2px;
+    vertical-align: middle; 
+}
+.c_toggle_table {
+	color: #0097fc;
+	cursor: pointer;
+}
+.m_head {
+	font-weight: 600;
+    color: #282E32;
+    white-space: nowrap;
+    text-align: center;
+}
+.m_active {
+ 	text-align: center;
+    padding: 0 20px;
+    line-height: 0px;
+    width: 105px;
+}
+.m_active > img {
+	width: 21px;
+    height: 15px;
+}
+
+.l_footer {
+  	background: #282E32;
+  	padding: 86px 0;
+  	font-family: Open Sans;
+}
+
+.c_info {
+  	vertical-align: middle;
+  	width: 100%; 
+}
+
+.copyright {
+  	opacity: 0.5;
+	color: #ffffff;
+  	font-size: 15px;
+  	letter-spacing: 0.34px; 
+}
+
+.terms_services {
+  	margin-top: 9px;
+	opacity: 0.3;
+	color: #ffffff;
+	font-size: 13px;
+	letter-spacing: 0.29px;
+}
+
+.nav {
+  	margin-top: 47px;
+}
+
+.c_bottom_menu_item {
+	display: inline-block;
+	margin-left: 30px;
+  	letter-spacing: 0.29px;
+  	font-size: 13px;
+  	opacity: 0.5;
+	color: #fff;
+	font-weight: 400;
+}
+.c_bottom_menu_item:hover {
+	opacity: 0.9;
+}
+
+.c_bottom_menu_item:first-child {
+    margin-left: 0; 
+}
+
+.lock_icon {
+  	position: absolute;
+  	right: 75px;
+  	top: 7px; 
+  	width: 38px;
+  	height: 54px;
+  	background: url("../assets/img/lock.svg") 50% 50% no-repeat /contain;
+}
+.open_icon {
+  	position: absolute;
+  	right: 5px;
+  	top: 0; 
+  	width: 55px;
+  	height: 77px;
+  	background: url("../assets/img/open_source.png") 50% 50% no-repeat /contain; 	
+}
+
+/*MEDIA*/
+@media screen and (max-width: 1024px) {
+  	.m_width {
+    	width: calc(100% - 184px); 
+	}
+  	.m_width_menu {
+    	width: calc(100% - 82px); 
+	}
+  	.m_third_section {
+    	padding: 103px 0 43px; }
+  	.с_description {
+    	margin-top: 28px; }
+  	.c_button {
+    	padding: 15px 9px;
+    }
+  	.icon {
+    	height: 42px;
+    	width: 42px;
+	}
+  	.c_info {
+    	margin-left: 8px;
+	}
+  	.b_questions {
+    	margin-top: 103px;
+	}
+	.c_table {
+    	margin-top: 75px;
+  	}
+    .row:first-child > .cell {
+      	padding-top: 0;
+  	}
+    .cell {
+      	padding: 42px 5px; 
+  	}
+    .table_supported_container {
+      	margin-top: 31px; 
+  	}
+    .supported_cards {
+        display: block;
+        border: 1px solid rgba(151, 151, 151, 0.2);
+        border-radius: 5px; 
+    }
+    .supported_cards_cell {
+    	font-size: 12px;
+      	padding: 11px;
+      	line-height: 18px;
+      	border: none;
+      	border-bottom: 1px solid rgba(151, 151, 151, 0.2); 
+  	}
+    .supported_cards_cell:nth-child(2) {
+        border-right: 1px solid rgba(151, 151, 151, 0.2); 
+    }
+    .b_questions .cards_cell.m_head {
+        font-weight: normal;
+        font-size: 15px; }
+    .m_head:first-child {
+        width: 70%;
+        text-align: left;
+    }
+    .c_toggle_table {
+      	margin-top: 14px; 
+    }
+  	.b_footer {
+    	position: relative; 
+    }
+    .c_info {
+      	margin-top: 9px; 
+  	}
+    .nav {
+      	margin-top: 104px; 
+    }
+    .terms_services {
+      	margin-top: 11px; 
+  	}
+    .open_icon {
+      	background-position: 50%;
+      	position: absolute;
+      	top: 0; 
+  	}
+    .lock_icon {
+      	top: 10px; 
+  }
+  	.l_footer {
+    	padding: 67px 0 55px;
+    	position: relative; 
+    } 
+}
+
+@media screen and (max-width: 800px) {
+  	.b_logo {
+    	height: 29px;
+    	width: 23px; 
+    }
+  	.logo_name {
+  		font-size: 15px;
+    	margin-left: 30px; 
+    }
+  	.c_menu_item {
+    	margin-right: 15px;
+    	font-size: 12px;
+    	line-height: 25px;
+    }
+  	.b_menu {
+    	line-height: 18px;
+    	min-height: 14px;
+    	display: block;
+    	margin-top: 18px;
+    	width: 100%; 
+	}
+  	.b_main {
+    	margin-top: 135px; 
+	}
+    .b_main > .c_title {
+      	font-size: 20px;
+      	line-height: 30px; }
+    .c_btn_download {
+      	margin-top: 46px; }
+  	.b_what_fortify_do > .c_title {
+    	font-size: 18px;
+    	padding-left: 5px;
+    	font-weight: normal;
+    	margin-bottom: 17px;
+    }
+  	.b_what_do_item {
+    	margin: 0 0 34px;
+    	display: block;
+    	width: 100%; }
+    .b_what_fortify_do .b_what_do_item:last-child {
+      	margin-bottom: 0;
+    }
+  	.с_description {
+    	line-height: 24px;
+    	margin-top: 14px; 
+    }
+    .b_slider_container {
+    	display: none;
+    }
+   .b_download_app {
+    	display: block;
+   }
+   .c_button > .c_info{
+   		margin-left:60px;
+   }
+  .b_download_app > .c_title {
+    	font-size: 20px;
+    	padding-left: 5px;
+    	font-weight: 600; }
+ 	.c_info > .name_os {
+ 		margin-top: 5px;
+    	font-size: 15px; 
+    }
+   .c_info >.version_os {
+    	font-size: 12px; 
+    }
+  .b_download_app > .c_button {
+  		width: 100%;
+    	padding: 25px;
+    	margin-top: 18px; 
+    }
+    .c_button:last-child {
+    	margin-top: 10px;
+	}
+  	.c_button > .icon {
+    	height: 42px;
+    	width: 42px; }
+  	.b_questions {
+    	margin-top: 38px; }
+    .b_questions > .c_title {
+      	font-size: 20px;
+      	font-weight: 600;
+      	margin-bottom: 30px;
+	}
+    .b_questions .cell,
+    .b_questions .row {
+      	width: 100% !important;
+      	display: block;
+    }
+    .c_table {
+    	margin-top: -13px; }
+    .cell {
+        padding: 0 0  30px;
+        color: rgba(40, 46, 50, 0.7); }
+    .question {
+        border-bottom: none;
+        padding: 30px 0 16px;
+        color: #282e32;
+    }
+    .table_supported_container {
+      	margin-top: 30px; 
+    }
+    .supported_cards {
+        border: 1px solid rgba(151, 151, 151, 0.2);
+    }
+    .supported_cards_cell {
+    	border-radius: 5px; 
+    	width: 15%; 
+      	font-size: 12px;
+      	padding: 11px;
+      	line-height: 18px;
+      }
+    .supported_cards_cell:first-child {
+        width: 85%;
+        border-right: none; 
+    }
+    .m_active {
+        padding: 0;
+        border-left: none; 
+    }
+    .b_questions .cards_cell > img {
+        width: 16px;
+        height: 13px; }
+    .m_head {
+        font-weight: 600;
+        font-size: 15px;
+        padding: 0; }
+    .m_head:nth-child(2) {
+        border-left: none; }
+    .m_head:first-child {
+        width: 72%;
+        padding: 11px 10px;
+        text-align: left;
+        border-right: none; 
+    }
+	.c_toggle_table {
+      	margin-top: 14px; 
+      }
+  	.m_width,
+  	.m_width_menu {
+    	width: calc(100% - 58px); 
+    }
+  	.l_section.m_main_section {
+    	padding: 27px 0 82px; 
+    }
+  	.l_section.m_second_section {
+    	padding: 38px 0 42px; 
+	}
+  	.l_section.m_third_section {
+    	padding: 38px 0 43px; 
+    }
+  	.l_footer {
+    	padding: 48px 0 54px;
+    	position: relative; 
+    }
+  	.nav {
+    	margin-top: 43px; 
+    }
+  	.terms_services {
+    margin-top: 13px; 
+	}
+  	.c_info {
+    	display: block;
+    	width: 100%;
+    }
+  	.c_bottom_menu_item {
+    	display: block;
+    	margin-bottom: 11px;
+    	margin-left: 0;
+	}
+    .c_bottom_menu_item:last-child {
+      	margin-bottom: 0; 
+    }
+  	.open_icon {
+    	vertical-align: bottom;
+    	height: 61px;
+    	width: 43px;
+    	position: absolute;
+    	top: auto;
+    	bottom: 39px;
+    	right: 0; 
+    }
+  	.lock_icon {
+    	height: 43px;
+    	width: 30px;
+    	top: auto;
+    	bottom: 48px;
+    	right: 63px; }
+	}
+
+@media screen and (max-width: 350px) {
+	.m_width,
+  	.m_width_menu {
+    	width: calc(100% - 54px); 
+	}
+	.b_download_app > .icon {
+	    height: 36px;
+	    width: 36px; 
+	}
+  	.b_download_app > .name_os {
+	    font-size: 13px;
+	    line-height: 16px; 
+	}
+  	.b_download_app >.version_os {
+	    font-size: 12px;
+	    line-height: 16px; 
+	}
+  	.b_download_app .c_button {
+    	padding: 20px 18px; 
+    }	
+  	.b_main {
+    	margin-top: 165px; 
+    }
+    .b_main > .c_title {
+      	letter-spacing: 0; 
+      }
+  	.cell {
+    	letter-spacing: -0.2px; }
+  	.c_table {
+    	margin-top: 17px; }
+ 	.row:first-child  > .cell {
+      	padding-top: 0; 
+  	}
+  	.supported_cards_cell {
+    	padding: 7px;
+    	letter-spacing: 0; 
+    }
+  	.nav {
+    	margin-top: 43px; 
+    }
+  	.terms_services {
+    	margin-top: 9px; 
+    }
+  	.lock_icon {
+    	top: 110px; 
+    }
+  	.open_icon {
+    	top: 100px; 
+	} 
+}
+
+@media screen and (min-width: 800px) {
+  .l_section.m_main_section {
+    padding: 40px 0 430px; 
+	}
+  .l_section.m_second_section {
+    padding: 350px 0 74px; 
+	} 
+}
+
+@media screen and (min-width: 1024px) {
+  .l_section.m_main_section {
+    padding: 40px 0 510px; 
+	}
+  .l_section.m_second_section {
+    padding-top: 368px; 
+	} 
+}
